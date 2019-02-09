@@ -1,0 +1,32 @@
+{
+    "name": "HassDNS",
+    "version": "0.1.8",
+    "slug": "hassdns",
+    "description": "Home Assistant DNS service",
+    "url": "https://github.com/larsla/hassdns",
+    "startup": "services",
+    "arch": [
+        "amd64",
+        "armhf",
+        "i386"
+    ],
+    "boot": "auto",
+    "hassio_api": true,
+    "hassio_role": "default",
+    "homeassistant_api": false,
+    "host_network": false,
+    "map": [
+        "config:rw"
+    ],
+    "options": {
+        "log_level": "trace",
+        "name": ""
+    },
+    "schema": {
+        "log_level": "match(^(trace|debug|info|notice|warning|error|fatal)$)",
+        "name": "str"
+    },
+    "environment": {
+        "LOG_FORMAT": "{LEVEL}: {MESSAGE}"
+    }
+}

@@ -1,0 +1,17 @@
+#!/usr/bin/with-contenv bash
+# ==============================================================================
+# larsla's Hass.io Add-ons: HassDNS
+# Runs the hassdns daemon
+# ==============================================================================
+# shellcheck disable=SC1091
+source /usr/lib/hassio-addons/base.sh
+
+hass.log.info 'Starting the HassDNS daemon'
+
+declare name
+
+name=$(hass.config.get 'name')
+
+echo "Name: ${name}"
+
+exec hassdns -daemon -key /config/hassdns.key -name ${name}
