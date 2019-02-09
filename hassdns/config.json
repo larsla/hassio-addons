@@ -19,7 +19,7 @@
         "config:rw"
     ],
     "options": {
-        "log_level": "trace",
+        "log_level": "info",
         "name": ""
     },
     "schema": {
